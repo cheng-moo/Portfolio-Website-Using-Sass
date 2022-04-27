@@ -1,0 +1,6 @@
+@use './resets' as *;
+@use './variables' as *;
+
+body {
+    background: $primary-color;
+}
