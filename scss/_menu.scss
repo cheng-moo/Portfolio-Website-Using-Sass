@@ -76,12 +76,44 @@
         background: $primary-color;
         list-style-type: none;
         padding-right: 1rem;
-        transform: translateY(-100%); //Idea to making sliding elements
+        transform: translateY(-100%); //Idea of making sliding elements
                                       // -100% means off the screen
         @include transition-ease;
 
         &.open {
             transform: translateY(0);
         }
+
+        &__item {
+            transform: translateX(100vw);
+            @include transition-ease;
+
+            &.open {
+                transform: translateX(0);
+            }
+
+            &.active > a {
+                color: $secondary-color;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            font-size: 2rem;
+            text-transform: uppercase;
+            padding: 2rem 0;
+            font-weight: 300;
+            @include transition-ease;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .menu-nav__item:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s; //Add a gradual delay to items
     }
 }
