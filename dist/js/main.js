@@ -20,7 +20,7 @@ function toggleMenu () {
         hamburger.classList.remove('open');
         nav.classList.remove('open');
         menuNav.classList.remove('open');
-        navItems.forEach(item => item.classList.removes('open'));
+        navItems.forEach(item => item.classList.remove('open'));
 
         showMenu = false;
     }
