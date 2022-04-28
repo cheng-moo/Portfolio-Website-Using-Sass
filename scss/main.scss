@@ -4,6 +4,7 @@
 @use './about';
 @use './projects';
 @use './contact';
+@use './responsive';
 
 body {
     background: $primary-color;
